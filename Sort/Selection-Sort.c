@@ -9,7 +9,7 @@ int main()
 
     int arr[100],n,i,j,pos,temp;
 
-    system("color 0a");
+    //system("color 0a");
     printf("Enter Array Size:\n");
     scanf("%d",&n);
 
