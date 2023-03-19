@@ -1,4 +1,4 @@
-/* ------ Selection Sort ------
+/* ------ Quick Sort ------
        Name: Tasrif Nur Himel
        ID: 221-35-1078
        Section: 37-(B)       */
