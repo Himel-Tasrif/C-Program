@@ -21,7 +21,7 @@ int main()
         {
             printf("%d is found at %d index",key,i+1);
         }
-        printf("\n");
+        //printf("\n");
     }
     return 0;
 }
