@@ -8,7 +8,7 @@ int main()
     printf("Enter %d of numbers: ",n);
     for(i=0; i<n; i++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d",&arr[i]);      
     }
     printf("Enter an index you want to remove: ");
     scanf("%d",&index);
