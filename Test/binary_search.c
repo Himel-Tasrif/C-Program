@@ -33,5 +33,5 @@ int main()
     }
     if(min > max)
         printf("\nNot found! %d isn't present in the list\n",item);
-    return 0;
+    return 0;    
 }
