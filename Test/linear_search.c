@@ -19,7 +19,7 @@ int main()
     {
         if(arr[i] == key)
         {
-            printf("%d is found at %d index",key,i+1);
+            printf("%d is found at %d position",key,i+1);
         }
         //printf("\n");
     }
