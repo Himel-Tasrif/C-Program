@@ -1,5 +1,5 @@
 // Merge Sort (Acsending Order)
-
+//Tasrif Nur Himel
 #include<stdio.h>
 void mergesort();
 void merge();
