@@ -30,7 +30,7 @@ int main()
                 pos = j;
             }
         }
-    if(pos != i)
+    if(pos != i)    
     {
         temp=arr[i];
             arr[i]=arr[pos];
@@ -45,5 +45,6 @@ int main()
         printf(" %d",arr[i]);
 
     }
+
     return 0;
 }
