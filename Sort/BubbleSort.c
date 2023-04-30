@@ -1,5 +1,5 @@
 //Bubbble Sort in Ascending Order
-
+// Tasrif Nur Himel
 #include<stdio.h>
 int main()
 {
@@ -33,5 +33,5 @@ int main()
     {
         printf(" %d",arr[i]);
     }
-    return 0;
+    return 0;     
 }
