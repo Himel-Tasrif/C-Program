@@ -1,3 +1,4 @@
+// Tasrif Nur Himel
 #include<stdio.h>
 int main()
 {
@@ -30,5 +31,5 @@ int main()
     }
     printf("\n");
 
-    return 0;
+    return 0;      
 }
