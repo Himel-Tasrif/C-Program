@@ -1,4 +1,3 @@
-/*Implementation of DFS traverasal mechanism*/
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -53,4 +52,6 @@ void DFS(int vertex)
 		k--;
 		DFS(arr[k]);
 	}	
+
+
 }
