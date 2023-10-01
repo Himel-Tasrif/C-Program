@@ -1,46 +1,51 @@
-// Tasrif Nur Himel
-
+// Merge Sort (Acsending Order)
+//Tasrif Nur Himel
 #include<stdio.h>
 void mergesort();
 void merge();
 int main()
 {
-    int arr[100],i,lb,ub,n,mid;
+    int arr[100],lb,hb,mid,n,i;
+
     printf("Enter array size: ");
     scanf("%d",&n);
-
     printf("\n");
 
-    printf("Enter %d of number: ",n);
+    printf("Enter %d numbers: ",n);
+
     for(i=0; i<n; i++)
     {
         scanf("%d",&arr[i]);
     }
-
-    lb = 0;
-    ub = n-1;
-    mergesort(arr,lb,ub);
+        lb = 0;
+        hb = n-1;
+    mergesort(arr,lb,hb);
     printf("\n");
-    printf("Sorted Number is: ");
+    printf("Sorted Elements Are: ");
+
     for(i=0; i<n; i++)
     {
         printf(" %d",arr[i]);
     }
+    printf("\n");
     return 0;
-  
 }
-void mergesort(int arr[], int lb, int ub)
+
+//For Divided:
+void mergesort(int arr[],int lb,int hb)
 {
     int mid;
-    if(lb < ub)
+    if(lb < hb)
     {
-        mid = (lb+ub)/2;
+        mid = (lb+hb)/2;
         mergesort(arr,lb,mid);
-        mergesort(arr,mid+1,ub);
-        merge(arr,lb,mid,ub);
+        mergesort(arr,mid+1,hb);
+        merge(arr,lb,mid,hb);
     }
 }
-void merge(int arr[], int lb, int mid, int ub)
+
+//For Merge:
+void merge(int arr[],int lb,int mid,int hb)
 {
     int brr[100];
     int i,j,k;
@@ -48,41 +53,43 @@ void merge(int arr[], int lb, int mid, int ub)
     j = mid+1;
     k = lb;
 
-    while((i<=mid) && (j<=ub))
-    {
-        if(arr[i] < arr[j])
+    while((i <= mid) && (j <= hb))
         {
-            brr[k] = arr[i];
-            i++;
-            k++;
+            if(arr[i] < arr[j])
+            {
+                brr[k] = arr[i];
+                i++;
+                k++;
+            }
+            else
+            {
+                brr[k] = arr[j];
+                j++;
+                k++;
+            }
         }
-        else{
-            brr[k] = arr[j];
-            j++;
-            k++;
-        }
-    }
 
-    if(i > mid)
-    {
-        while(j<=mid)
+        if(i>mid)
         {
-            brr[k] = arr[j];
-            j++;
-            k++;
+            while(j <= hb)
+            {
+                brr[k] = arr[j];
+                j++;
+                k++;
+            }
         }
-    }
-    else{
-        while(i<=mid)
+        else
         {
-            brr[k] = arr[i];
-            i++;
-            k++;
+            while(i <= mid)
+            {
+                brr[k] = arr[i];
+                i++;
+                k++;
+            }
         }
-    }
-
-    for(i=lb; i<=ub; i++)
-    {
-        arr[i] = brr[i];
-    }
+        //Now Add all
+        for(i = lb; i <= hb; i++)
+        {
+          arr[i] = brr[i];
+        }
 }
